@@ -1,0 +1,481 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Qual A Boa Events
+meta:
+  id: wrk_14363beeb2074a93a4e455092c7a5de4
+  created: 1764469234300
+  modified: 1764469624938
+  description: ""
+collection:
+  - name: Auth
+    meta:
+      id: fld_76fd2a65d2d14323959fd0a64df2814b
+      created: 1764469665974
+      modified: 1764469694285
+      sortKey: -1764469689786
+      description: ""
+    children:
+      - name: Organizer
+        meta:
+          id: fld_fa36d115707647d497f47eb07c1cb5d6
+          created: 1764548429897
+          modified: 1764548429897
+          sortKey: -1764548429897
+          description: ""
+        children:
+          - url: "{{ _[''].base_url }}/register"
+            name: Register Organizer
+            meta:
+              id: req_cb0dd6f2c5fa44949a5911e598faa349
+              created: 1764469234348
+              modified: 1764550514325
+              isPrivate: false
+              description: ""
+              sortKey: -1764548431582
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"fullName": "Andre Desenvolvedor",
+                	"email": "Andre@clicksoft.com.br",
+                	"password": "minhasenhaforte",
+                	"cpf": "123.456.789-97",
+                	"role": "ORGANIZER"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _[''].base_url }}/login"
+            name: Login Organizer
+            meta:
+              id: req_f653f65922354675bdfe3d3fce89b43d
+              created: 1764475475597
+              modified: 1764550506287
+              isPrivate: false
+              description: ""
+              sortKey: -1764548431682
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email": "Andre@clicksoft.com.br",
+                	"password": "minhasenhaforte"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _[''].base_url }}/profile"
+            name: Update Profile Organizer
+            meta:
+              id: req_231676efbc944cb78d76d85b5731856d
+              created: 1764548537653
+              modified: 1764550832691
+              isPrivate: false
+              description: ""
+              sortKey: -1764548431482
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "fullName": "Andre Gustavo"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: "{{ _[''].token_organizer }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Participant
+        meta:
+          id: fld_a4a026a075654f6399138b6e5935169f
+          created: 1764548445573
+          modified: 1764548445573
+          sortKey: -1764548445573
+          description: ""
+        children:
+          - url: "{{ _[''].base_url }}/register"
+            name: Register Participant
+            meta:
+              id: req_731cb1554cd446f596bbef0e25a0d766
+              created: 1764544114531
+              modified: 1764550490177
+              isPrivate: false
+              description: ""
+              sortKey: -1764548448656
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"fullName": "Pedro Desenvolvedor",
+                	"email": "Pedro@clicksoft.com.br",
+                	"password": "minhasenhaforte",
+                	"cpf": "123.456.789-06",
+                	"role": "PARTICIPANT"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _[''].base_url }}/login"
+            name: Login Participant
+            meta:
+              id: req_abcaa8306bb24a43a5691aa9e1b8a110
+              created: 1764544176452
+              modified: 1764550468673
+              isPrivate: false
+              description: ""
+              sortKey: -1764548448756
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email": "Pedro@clicksoft.com.br",
+                	"password": "minhasenhaforte"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _[''].base_url }}/profile"
+            name: Update Profile Participant
+            meta:
+              id: req_c32cdc87b769425fb803d81cac997287
+              created: 1764548487470
+              modified: 1764550911181
+              isPrivate: false
+              description: ""
+              sortKey: -1764548448556
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "fullName": "Pedro Desenvolvedor Senior"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: "{{ _[''].token_participant }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+  - name: Events
+    meta:
+      id: fld_e691a792999e4017ac7542e48aaac5a4
+      created: 1764469689686
+      modified: 1764547665139
+      sortKey: -1764469689686
+      description: ""
+    children:
+      - name: Organizer
+        meta:
+          id: fld_24e541e9b022424bafa40ef9c361032d
+          created: 1764548354877
+          modified: 1764548363220
+          sortKey: -1764548354877
+          description: ""
+        children:
+          - url: "{{ _[''].base_url }}/events"
+            name: Create Event
+            meta:
+              id: req_c258343165644686a2f9e9ed22a3bd84
+              created: 1764541745606
+              modified: 1764550849609
+              isPrivate: false
+              description: ""
+              sortKey: -1764548371587
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"name": "Evento ClickSoft",
+                	"description": "Aprendendo Clean Architecture",
+                	"location": "Online via Zoom",
+                	"eventDate": "2025-12-27 14:00:00",
+                	"maxCapacity": 50
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              disabled: false
+              token: "{{ _[''].token_organizer }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _[''].base_url }}/events/3/participants"
+            name: Get registered users at the event
+            meta:
+              id: req_198863c80f504881a16992620614016d
+              created: 1764545654144
+              modified: 1764550866802
+              isPrivate: false
+              description: ""
+              sortKey: -1764548371387
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: "{{ _[''].token_organizer }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _[''].base_url }}/events/1"
+            name: Edit Event
+            meta:
+              id: req_2f41bc1f4e4b4d22b14e7f0a9c71180a
+              created: 1764546519770
+              modified: 1764550859809
+              isPrivate: false
+              description: ""
+              sortKey: -1764548371487
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"name": "Workshop AdonisJS 6 - Edição Avançada",
+                	"maxCapacity": 100
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: "{{ _[''].token_organizer }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _[''].base_url }}/events/1"
+            name: Delete Event
+            meta:
+              id: req_959ea5d1bc724bfd8ea62b10dbd61221
+              created: 1764546706591
+              modified: 1764550873617
+              isPrivate: false
+              description: ""
+              sortKey: -1764548371287
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: "{{ _[''].token_organizer }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Participant
+        meta:
+          id: fld_274ce984d40f44b4b60e621e89e9211d
+          created: 1764548400585
+          modified: 1764548400585
+          sortKey: -1764548400585
+          description: ""
+        children:
+          - url: "{{ _[''].base_url }}/events/2/register"
+            name: Register for the Event
+            meta:
+              id: req_da7f594dc6ac424e9b2073e514df9a6c
+              created: 1764543959044
+              modified: 1764550880948
+              isPrivate: false
+              description: ""
+              sortKey: -1764548404518
+            method: POST
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: "{{ _[''].token_participant }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _[''].base_url }}/my-registrations"
+            name: Get my registrations
+            meta:
+              id: req_4861d837d0a0416b8d829d4ee525e7ec
+              created: 1764545969962
+              modified: 1764550888061
+              isPrivate: false
+              description: ""
+              sortKey: -1764548404418
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: "{{ _[''].token_participant }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _[''].base_url }}/events/2/register"
+            name: Cancel Registration
+            meta:
+              id: req_f949de21a7bf4a42b9913750de947cee
+              created: 1764547682306
+              modified: 1764550895355
+              isPrivate: false
+              description: ""
+              sortKey: -1764548404318
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/12.1.0
+                description: ""
+                disabled: false
+            authentication:
+              type: bearer
+              token: "{{ _[''].token_participant }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_abe074fb3690b72f9bda027b3d9c4265c89a4b4e
+    created: 1764469234303
+    modified: 1764469234303
+environments:
+  name: Base Environment
+  meta:
+    id: env_abe074fb3690b72f9bda027b3d9c4265c89a4b4e
+    created: 1764469234302
+    modified: 1764550778644
+    isPrivate: false
+  data:
+    "":
+      base_url: http://localhost:3333/api
+      token_organizer: token_organizer
+      token_participant: token_participant
