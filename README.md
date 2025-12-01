@@ -260,7 +260,7 @@ O projeto inclui uma coleção completa de requisições para o **Insomnia**, fa
 
 1. Abra o **Insomnia**
 2. Clique em **Application** → **Preferences** → **Data** → **Import Data**
-3. Selecione o arquivo `Qual A Boa Events.json` na raiz do projeto
+3. Selecione o arquivo `Insomnia_2025-11-30.yaml` na raiz do projeto
 4. A coleção "Qual A Boa Events" será importada com todas as rotas configuradas
 
 ### Estrutura da coleção
