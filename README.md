@@ -1,5 +1,9 @@
 # Qual A Boa Events
 
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="./owl-logo.png" width="200" alt="Qual A Boa Events Logo" /></a>
+</p>
+
 API REST para gerenciamento de eventos, desenvolvida com AdonisJS. O sistema permite que organizadores criem e gerenciem eventos, enquanto participantes podem se registrar e acompanhar seus eventos.
 
 ## 🚀 Tecnologias
